@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Check, ChevronDown, ChevronUp, Plus, Trash2, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "@/components/ui/command";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { MenuItem } from "@/data/menu-items";
 import { cn } from "@/lib/utils";
@@ -68,31 +68,33 @@ const MenuItemSelector = ({
         <PopoverContent className="p-0 w-full min-w-[260px]">
           <Command>
             <CommandInput placeholder={`Search ${title.toLowerCase()}...`} />
-            <CommandEmpty>No item found.</CommandEmpty>
-            <CommandGroup>
-              {safeItems.map((item) => {
-                const isSelected = safeSelectedItems.some((selected) => selected.id === item.id);
-                return (
-                  <CommandItem
-                    key={item.id}
-                    value={item.id}
-                    onSelect={() => {
-                      isSelected ? onItemRemove(item) : handleSelect(item);
-                    }}
-                  >
-                    <div className={cn("mr-2 h-4 w-4 flex items-center justify-center", 
-                      isSelected ? "opacity-100" : "opacity-0")}>
-                      {isSelected ? (
-                        <Check className="h-4 w-4" />
-                      ) : (
-                        <Plus className="h-4 w-4" />
-                      )}
-                    </div>
-                    {item.name}
-                  </CommandItem>
-                );
-              })}
-            </CommandGroup>
+            <CommandList>
+              <CommandEmpty>No item found.</CommandEmpty>
+              <CommandGroup>
+                {safeItems.map((item) => {
+                  const isSelected = safeSelectedItems.some((selected) => selected.id === item.id);
+                  return (
+                    <CommandItem
+                      key={item.id}
+                      value={item.id}
+                      onSelect={() => {
+                        isSelected ? onItemRemove(item) : handleSelect(item);
+                      }}
+                    >
+                      <div className={cn("mr-2 h-4 w-4 flex items-center justify-center", 
+                        isSelected ? "opacity-100" : "opacity-0")}>
+                        {isSelected ? (
+                          <Check className="h-4 w-4" />
+                        ) : (
+                          <Plus className="h-4 w-4" />
+                        )}
+                      </div>
+                      {item.name}
+                    </CommandItem>
+                  );
+                })}
+              </CommandGroup>
+            </CommandList>
           </Command>
         </PopoverContent>
       </Popover>
