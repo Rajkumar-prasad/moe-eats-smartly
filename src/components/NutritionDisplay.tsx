@@ -49,8 +49,7 @@ const NutritionDisplay = ({ nutrition, className }: NutritionDisplayProps) => {
           </div>
           <Progress 
             value={(nutrition.protein / dailyValues.protein) * 100} 
-            className="h-2"
-            indicatorClassName={getProgressColor('protein', nutrition.protein)}
+            className={cn("h-2", getProgressColor('protein', nutrition.protein))}
           />
         </div>
         
@@ -62,8 +61,7 @@ const NutritionDisplay = ({ nutrition, className }: NutritionDisplayProps) => {
           </div>
           <Progress 
             value={(nutrition.fat / dailyValues.fat) * 100} 
-            className="h-2"
-            indicatorClassName={getProgressColor('fat', nutrition.fat)}
+            className={cn("h-2", getProgressColor('fat', nutrition.fat))}
           />
         </div>
         
@@ -75,8 +73,7 @@ const NutritionDisplay = ({ nutrition, className }: NutritionDisplayProps) => {
           </div>
           <Progress 
             value={(nutrition.carbs / dailyValues.carbs) * 100} 
-            className="h-2"
-            indicatorClassName={getProgressColor('carbs', nutrition.carbs)}
+            className={cn("h-2", getProgressColor('carbs', nutrition.carbs))}
           />
         </div>
         
@@ -88,8 +85,7 @@ const NutritionDisplay = ({ nutrition, className }: NutritionDisplayProps) => {
           </div>
           <Progress 
             value={(nutrition.sodium / dailyValues.sodium) * 100} 
-            className="h-2"
-            indicatorClassName={getProgressColor('sodium', nutrition.sodium)}
+            className={cn("h-2", getProgressColor('sodium', nutrition.sodium))}
           />
         </div>
       </CardContent>

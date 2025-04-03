@@ -19,8 +19,8 @@ interface MenuItemSelectorProps {
 
 const MenuItemSelector = ({
   title,
-  items,
-  selectedItems,
+  items = [], // Ensure items is never undefined
+  selectedItems = [], // Ensure selectedItems is never undefined
   onItemSelect,
   onItemRemove,
   multiSelect = false,
@@ -34,6 +34,10 @@ const MenuItemSelector = ({
     }
   };
 
+  // Safeguard to ensure we're working with arrays
+  const safeItems = Array.isArray(items) ? items : [];
+  const safeSelectedItems = Array.isArray(selectedItems) ? selectedItems : [];
+
   return (
     <div className="flex flex-col space-y-2">
       <label className="text-sm font-medium">{title}</label>
@@ -45,11 +49,11 @@ const MenuItemSelector = ({
             aria-expanded={open}
             className="justify-between border-input hover:bg-muted/50"
           >
-            {selectedItems.length > 0 ? (
+            {safeSelectedItems.length > 0 ? (
               <span className="truncate">
                 {multiSelect
-                  ? `${selectedItems.length} items selected`
-                  : selectedItems[0].name}
+                  ? `${safeSelectedItems.length} items selected`
+                  : safeSelectedItems[0].name}
               </span>
             ) : (
               <span className="text-muted-foreground">Select {title.toLowerCase()}</span>
@@ -66,8 +70,8 @@ const MenuItemSelector = ({
             <CommandInput placeholder={`Search ${title.toLowerCase()}...`} />
             <CommandEmpty>No item found.</CommandEmpty>
             <CommandGroup>
-              {items.map((item) => {
-                const isSelected = selectedItems.some((selected) => selected.id === item.id);
+              {safeItems.map((item) => {
+                const isSelected = safeSelectedItems.some((selected) => selected.id === item.id);
                 return (
                   <CommandItem
                     key={item.id}
@@ -93,9 +97,9 @@ const MenuItemSelector = ({
         </PopoverContent>
       </Popover>
 
-      {multiSelect && selectedItems.length > 0 && (
+      {multiSelect && safeSelectedItems.length > 0 && (
         <div className="flex flex-wrap gap-2 mt-2 animate-fade-in">
-          {selectedItems.map((item) => (
+          {safeSelectedItems.map((item) => (
             <Badge
               key={item.id}
               variant="secondary"
@@ -113,12 +117,12 @@ const MenuItemSelector = ({
               </Button>
             </Badge>
           ))}
-          {selectedItems.length > 1 && (
+          {safeSelectedItems.length > 1 && (
             <Button
               variant="ghost"
               size="sm"
               className="h-6 text-xs flex gap-1 text-muted-foreground hover:text-destructive"
-              onClick={() => selectedItems.forEach((item) => onItemRemove(item))}
+              onClick={() => safeSelectedItems.forEach((item) => onItemRemove(item))}
             >
               <Trash2 className="h-3 w-3" /> Clear all
             </Button>
