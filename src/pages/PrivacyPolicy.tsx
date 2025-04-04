@@ -1,6 +1,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AdsenseAd from "@/components/AdsenseAd";
 
 const PrivacyPolicy = () => {
   return (
@@ -8,6 +9,7 @@ const PrivacyPolicy = () => {
       <Header />
       
       <main className="flex-1 container mx-auto px-4 py-8">
+        <AdsenseAd />
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-6">Privacy Policy</h1>
           
@@ -15,6 +17,8 @@ const PrivacyPolicy = () => {
             <p>
               This Privacy Policy describes how your personal information is collected, used, and shared when you visit Moe's Nutrition Calculator website.
             </p>
+            
+            <AdsenseAd />
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Information We Collect</h2>
             
@@ -25,6 +29,8 @@ const PrivacyPolicy = () => {
             <p className="mt-4">
               Additionally, as you browse the site, we collect information about the individual web pages that you view, what websites or search terms referred you to our site, and information about how you interact with the site. We refer to this automatically-collected information as "Device Information."
             </p>
+            
+            <AdsenseAd />
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">How We Use Your Information</h2>
             
@@ -37,6 +43,8 @@ const PrivacyPolicy = () => {
             <p>
               We do not share your Personal Information with third parties except to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.
             </p>
+            
+            <AdsenseAd />
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Behavioral Advertising</h2>
             
@@ -55,6 +63,8 @@ const PrivacyPolicy = () => {
             <p>
               If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us.
             </p>
+            
+            <AdsenseAd />
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Data Retention</h2>
             
@@ -75,6 +85,7 @@ const PrivacyPolicy = () => {
             </p>
           </div>
         </div>
+        <AdsenseAd />
       </main>
       
       <Footer />

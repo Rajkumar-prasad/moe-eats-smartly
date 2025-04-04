@@ -11,6 +11,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
+import AdsenseAd from "./components/AdsenseAd";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner position="top-center" closeButton />
       <BrowserRouter>
+        <AdsenseAd />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

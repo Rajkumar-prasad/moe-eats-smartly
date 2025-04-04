@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail } from "lucide-react";
+import AdsenseAd from "@/components/AdsenseAd";
 
 const Contact = () => {
   return (
@@ -11,6 +12,7 @@ const Contact = () => {
       <Header />
       
       <main className="flex-1 container mx-auto px-4 py-8">
+        <AdsenseAd />
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-6">Contact Us</h1>
           
@@ -38,6 +40,8 @@ const Contact = () => {
                   </a>
                 </div>
                 
+                <AdsenseAd />
+                
                 <div className="border-t border-border/50 pt-6 mt-2">
                   <h3 className="font-semibold text-lg mb-3">Response Time</h3>
                   <p className="text-muted-foreground">
@@ -49,6 +53,7 @@ const Contact = () => {
             </CardContent>
           </Card>
         </div>
+        <AdsenseAd />
       </main>
       
       <Footer />

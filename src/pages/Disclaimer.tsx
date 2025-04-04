@@ -1,6 +1,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AdsenseAd from "@/components/AdsenseAd";
 
 const Disclaimer = () => {
   return (
@@ -8,6 +9,7 @@ const Disclaimer = () => {
       <Header />
       
       <main className="flex-1 container mx-auto px-4 py-8">
+        <AdsenseAd />
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-6">Disclaimer</h1>
           
@@ -15,6 +17,8 @@ const Disclaimer = () => {
             <p>
               The information provided by Moe's Nutrition Calculator ("we," "us," or "our") on our website is for general informational purposes only. All information on the site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
             </p>
+            
+            <AdsenseAd />
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Nutritional Information</h2>
             
@@ -25,6 +29,8 @@ const Disclaimer = () => {
             <p className="mt-4">
               For the most accurate and up-to-date nutritional information, please consult with your local Moe's Southwest Grill restaurant or the official Moe's Southwest Grill website.
             </p>
+            
+            <AdsenseAd />
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">No Affiliation with Moe's Southwest Grill</h2>
             
@@ -38,6 +44,8 @@ const Disclaimer = () => {
               The information provided by our nutrition calculator is not intended to replace professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition or dietary restrictions.
             </p>
             
+            <AdsenseAd />
+            
             <h2 className="text-2xl font-semibold mt-8 mb-4">Food Allergies and Sensitivities</h2>
             
             <p>
@@ -49,6 +57,8 @@ const Disclaimer = () => {
             <p>
               The site may contain links to external websites that are not provided or maintained by or in any way affiliated with us. Please note that we do not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.
             </p>
+            
+            <AdsenseAd />
             
             <h2 className="text-2xl font-semibold mt-8 mb-4">Errors and Omissions Disclaimer</h2>
             
@@ -63,6 +73,7 @@ const Disclaimer = () => {
             </p>
           </div>
         </div>
+        <AdsenseAd />
       </main>
       
       <Footer />
