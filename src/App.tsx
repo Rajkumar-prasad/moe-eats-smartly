@@ -31,6 +31,7 @@ const App = () => (
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <AdsenseAd />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

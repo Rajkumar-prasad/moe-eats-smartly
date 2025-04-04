@@ -4,7 +4,8 @@ import { useEffect } from "react";
 const AdsenseAd = () => {
   useEffect(() => {
     try {
-      const adsbygoogle = window.adsbygoogle || [];
+      // Fix TypeScript error by using window declaration
+      const adsbygoogle = (window as any).adsbygoogle || [];
       adsbygoogle.push({});
     } catch (error) {
       console.error("Error loading AdSense ad:", error);
