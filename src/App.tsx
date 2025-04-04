@@ -21,7 +21,6 @@ const App = () => (
       <Toaster />
       <Sonner position="top-center" closeButton />
       <BrowserRouter>
-        <AdsenseAd />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

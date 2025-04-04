@@ -7,9 +7,9 @@ const Terms = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-moes-cream to-white dark:from-moes-brown/90 dark:to-gray-900">
       <Header />
+      <AdsenseAd />
       
       <main className="flex-1 container mx-auto px-4 py-8">
-        <AdsenseAd />
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-6">Terms and Conditions</h1>
           

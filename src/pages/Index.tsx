@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import NutritionCalculator from "@/components/NutritionCalculator";
 import Header from "@/components/Header";
@@ -17,6 +18,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-moes-cream to-white dark:from-moes-brown/90 dark:to-gray-900">
       <Header />
+      <AdsenseAd />
 
       <main className={cn(
         "flex-1 container mx-auto px-4 py-6 md:py-8", 
