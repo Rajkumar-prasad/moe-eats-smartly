@@ -1,10 +1,10 @@
-
 import { useState, useEffect } from "react";
 import NutritionCalculator from "@/components/NutritionCalculator";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Check, Clock, Salad, Utensils, Heart } from "lucide-react";
+import AdsenseAd from "@/components/AdsenseAd";
 
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
@@ -32,11 +32,13 @@ const Index = () => {
         </div>
         
         <NutritionCalculator />
+        <AdsenseAd />
 
         <section className="mt-16 max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center md:text-left">
             The Complete Guide to Moe's Nutrition Facts
           </h2>
+          <AdsenseAd />
           
           <div className="grid md:grid-cols-2 gap-8 mb-10">
             <div>
@@ -80,9 +82,11 @@ const Index = () => {
               </ul>
             </div>
           </div>
+          <AdsenseAd />
 
           <div className="mb-12">
             <h3 className="text-xl font-semibold mb-4">Take Control of Your Moe's Menu Choices</h3>
+            <AdsenseAd />
             <p className="mb-4">
               I've been a Moe's fan for years, but keeping track of my macros while enjoying my weekly burrito bowl was always a hassle. That's why I built this Moe's macro calculator—to help fellow Moe's lovers make informed choices without sacrificing taste.
             </p>
@@ -93,6 +97,7 @@ const Index = () => {
               As someone who used to struggle with finding the right balance between enjoying my favorite Moe's dishes and maintaining a healthy lifestyle, I understand the importance of having accurate nutrition facts at your fingertips. Our Moe's calorie counter was designed with this exact challenge in mind.
             </p>
           </div>
+          <AdsenseAd />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-moes-cream/40 dark:bg-moes-brown/30 p-5 rounded-lg shadow-sm flex flex-col">
@@ -117,6 +122,7 @@ const Index = () => {
               </p>
             </div>
           </div>
+          <AdsenseAd />
 
           <div className="bg-moes-cream/30 dark:bg-moes-brown/20 p-6 rounded-lg shadow-sm mb-12">
             <h3 className="text-xl font-semibold mb-4">Popular Moe's Nutrition Questions</h3>
@@ -158,9 +164,11 @@ const Index = () => {
               </div>
             </div>
           </div>
+          <AdsenseAd />
 
           <div className="mb-12">
             <h3 className="text-xl font-semibold mb-4">Understanding Macros at Moe's Southwest Grill</h3>
+            <AdsenseAd />
             <p className="mb-4">
               When it comes to tracking macronutrients, Moe's offers plenty of options to customize your meal. Our Moe's macro calculator breaks down the protein, carbs, and fats in each ingredient, allowing you to build meals that fit your specific macro targets.
             </p>
@@ -171,6 +179,7 @@ const Index = () => {
               The beauty of Moe's Southwest Grill nutrition is the flexibility it offers for different dietary approaches. Whether you follow keto, paleo, Mediterranean, or any other eating style, you can find options that work for you by using our detailed Moe's nutrition facts.
             </p>
           </div>
+          <AdsenseAd />
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-moes-cream/30 dark:bg-moes-brown/20 p-6 rounded-lg shadow-sm">
@@ -200,6 +209,7 @@ const Index = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Beyond Calories: The Complete Nutritional Picture</h3>
+              <AdsenseAd />
               <p className="mb-4">
                 While calories get most of the attention, our Moe's nutrition calculator provides a more complete picture of what you're eating. From sodium content to dietary fiber, you can see all the important metrics that impact your health.
               </p>
@@ -211,9 +221,11 @@ const Index = () => {
               </p>
             </div>
           </div>
+          <AdsenseAd />
 
           <div className="mb-10">
             <h3 className="text-xl font-semibold mb-4">Make Informed Choices with Our Moe's Calorie Counter</h3>
+            <AdsenseAd />
             <p className="mb-4">
               The best thing about Moe's Southwest Grill is the customization—but that makes tracking nutrition tricky. Our Moe's calorie counter eliminates the guesswork by calculating the exact nutritional profile of your custom creation.
             </p>
@@ -227,6 +239,7 @@ const Index = () => {
               Whether you're a longtime Moe's enthusiast or trying it for the first time, our detailed nutritional breakdown helps you navigate the menu like a pro. The days of wondering about calories, macros, and other nutritional facts for Moe's menu items are over!
             </p>
           </div>
+          <AdsenseAd />
 
           <div className="text-center">
             <h3 className="text-xl font-semibold mb-3">Ready to Build Your Perfect Moe's Meal?</h3>
@@ -240,6 +253,7 @@ const Index = () => {
               Try the Calculator Now <ArrowRight className="h-4 w-4" />
             </button>
           </div>
+          <AdsenseAd />
         </section>
       </main>
 
