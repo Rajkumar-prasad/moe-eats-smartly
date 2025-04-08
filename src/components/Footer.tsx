@@ -24,6 +24,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <a href="https://moesnutritioncalculator.online/blog/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
                 <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   About Us
                 </Link>

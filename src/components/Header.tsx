@@ -70,6 +70,13 @@ const NavLinks = ({ onClick }: { onClick: () => void }) => (
     >
       Home
     </Link>
+    <a
+      href="https://moesnutritioncalculator.online/blog/"
+      onClick={onClick}
+      className="text-foreground/80 hover:text-foreground transition-colors px-3 py-2 rounded-md hover:bg-accent"
+    >
+      Blog
+    </a>
     <Link
       to="/about"
       onClick={onClick}
